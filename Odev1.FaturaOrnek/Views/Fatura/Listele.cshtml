@@ -1,0 +1,35 @@
+﻿@model List<Odev1.FaturaOrnek.Models.Fatura>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listele</h2>
+
+
+<table>
+    <tr>
+        <th>Fatura ID</th>
+        <th>Kullanıcı ID</th>
+        <th>Genel Toplam</th>
+        <th>Kayıt Zamanı</th>
+        <th>Onaylandı</th>
+        <th>Yazdırıldı</th>
+    </tr>
+
+    @foreach (var item in Model)
+
+
+    {
+       
+    <tr>
+        <td>@item.FaturaID</td>
+        <td>@item.KullaniciID</td>
+        <td>@item.GenelToplam</td>
+        <td>@item.KayitZamani</td>
+        <td>@item.Onaylandi</td>
+        <td>@item.Yazdirildi</td>
+    </tr>
+
+}
+</table>
